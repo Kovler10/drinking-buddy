@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { BottomNavigation } from './components/bottom-navigation/bottom-navigation';
+
+import { Page } from './pages/page';
 
 const App: React.FC = () => {
   return (
@@ -10,9 +11,7 @@ const App: React.FC = () => {
           <Route
             path="/:tabValue"
             element={
-              <>
-                <BottomNavigation />
-              </>
+              <Page/>
             }
           />
         </Routes>
