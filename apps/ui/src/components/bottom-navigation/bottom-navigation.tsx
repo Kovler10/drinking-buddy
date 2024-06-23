@@ -7,16 +7,31 @@ const BottomNavigation: React.FC = () => {
   const { tabValue } = useParams();
 
   return (
-    <Tabs value={tabValue} onChange={(value) => navigate(`/${value}`)}>
-      <Tabs.List grow>
+    <Tabs
+      styles={{
+        root: { width: '100%' },
+        list: {
+          width: '100%',
+          display: 'flex',
+        },
+        tab: {
+          width: '33.333%',
+        },
+      }}
+      inverted
+      value={tabValue}
+      onChange={(value) => navigate(`/${value}`)}
+    >
+      <Tabs.List justify="center">
         <Tabs.Tab value={'stats'}>
-          <IconChartBar />
+          <IconChartBar /> <p>stats</p>
         </Tabs.Tab>
         <Tabs.Tab value={'follow'}>
           <IconBrandFeedly />
+          <p>friends</p>
         </Tabs.Tab>
         <Tabs.Tab value={'profile'}>
-          <IconBottle />
+          <IconBottle /> <p>profile</p>
         </Tabs.Tab>
       </Tabs.List>
     </Tabs>

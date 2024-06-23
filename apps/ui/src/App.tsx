@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {
+  Route,
+  Routes,
+  Navigate,
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
 import { Page } from './pages/page';
 
@@ -7,13 +12,8 @@ const App: React.FC = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<>home</>} />
-          <Route
-            path="/:tabValue"
-            element={
-              <Page/>
-            }
-          />
+          <Route path="/" element={<Navigate to="/profile" replace />} />
+          <Route path="/:tabValue" element={<Page />} />
         </Routes>
       </Router>
     </>

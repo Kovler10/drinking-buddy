@@ -5,6 +5,7 @@ import { registerSW } from 'virtual:pwa-register';
 
 import { App } from './App.tsx';
 import { theme } from './theme.ts';
+import './index.css';
 
 const updateServiceWorkers = registerSW({
   onNeedRefresh() {

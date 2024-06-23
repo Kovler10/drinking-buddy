@@ -1,5 +1,7 @@
-const Follow: React.FC = () => {
-    return <>Follow</>
-}
+import { Flex } from '@mantine/core';
 
-export {Follow};
+const Follow: React.FC = () => {
+  return <Flex styles={{ root: { height: '91.7vh' } }}>Follow</Flex>;
+};
+
+export { Follow };
