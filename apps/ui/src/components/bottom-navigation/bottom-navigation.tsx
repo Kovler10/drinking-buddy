@@ -1,4 +1,4 @@
-import { Tabs } from '@mantine/core';
+import { Flex, Tabs } from '@mantine/core';
 import { useNavigate, useParams } from 'react-router-dom';
 import { IconBrandFeedly, IconChartBar, IconBottle } from '@tabler/icons-react';
 
@@ -7,31 +7,25 @@ const BottomNavigation: React.FC = () => {
   const { tabValue } = useParams();
 
   return (
-    <Tabs
-      styles={{
-        root: { width: '100%' },
-        list: {
-          width: '100%',
-          display: 'flex',
-        },
-        tab: {
-          width: '33.333%',
-        },
-      }}
-      inverted
-      value={tabValue}
-      onChange={(value) => navigate(`/${value}`)}
-    >
-      <Tabs.List justify="center">
+    <Tabs inverted value={tabValue} onChange={(value) => navigate(`/${value}`)}>
+      <Tabs.List grow>
         <Tabs.Tab value={'stats'}>
-          <IconChartBar /> <p>stats</p>
+          <Flex direction={'column'} align={'center'}>
+            <IconChartBar />
+            <p>stats</p>
+          </Flex>
         </Tabs.Tab>
         <Tabs.Tab value={'follow'}>
-          <IconBrandFeedly />
-          <p>friends</p>
+          <Flex direction={'column'} align={'center'}>
+            <IconBrandFeedly />
+            <p>friends</p>
+          </Flex>
         </Tabs.Tab>
         <Tabs.Tab value={'profile'}>
-          <IconBottle /> <p>profile</p>
+          <Flex direction={'column'} align={'center'}>
+            <IconBottle />
+            <p>profile</p>
+          </Flex>
         </Tabs.Tab>
       </Tabs.List>
     </Tabs>
