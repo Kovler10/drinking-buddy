@@ -26,7 +26,7 @@ const Profile: React.FC = () => {
   );
 
   return (
-    <Flex direction={'column'} mb={'80px'}>
+    <Flex direction={'column'}>
       <PageHeader title="Profile" />
 
       <PieChart

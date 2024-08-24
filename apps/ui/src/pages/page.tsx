@@ -23,6 +23,7 @@ const Page: React.FC = () => {
           padding: 0,
           height: '100vh',
           flexDirection: 'column',
+          justifyContent: 'space-between',
         },
       }}
     >
